@@ -78,7 +78,7 @@ const EvaluatorRegister = () => {
       
       if (response.data.success) {
         toast.success('Evaluator account created successfully!');
-        navigate('/evaluator/login');
+        navigate('/login');
       } else {
         setError(response.data.message || 'Registration failed');
       }
@@ -220,7 +220,7 @@ const EvaluatorRegister = () => {
               <div className="flex justify-between items-center mt-4">
                 <div className="text-sm">
                   Already have an account?{' '}
-                  <Link to="/evaluator/login" className="text-green-600 hover:underline font-medium">
+                  <Link to="/login" className="text-green-600 hover:underline font-medium">
                     Sign in here
                   </Link>
                 </div>
@@ -228,7 +228,7 @@ const EvaluatorRegister = () => {
 
               <div className="flex justify-between items-center mt-4">
                 <Link 
-                  to="/admin/login" 
+                  to="/login" 
                   className="text-sm text-gray-600 hover:text-gray-700 hover:underline font-medium"
                 >
                   Admin Login

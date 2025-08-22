@@ -242,7 +242,7 @@ const InternalMarksEvaluation = () => {
             <div className="flex items-center">
               <Button
                 variant="outline"
-                onClick={() => navigate('/evaluator/dashboard')}
+                onClick={() => navigate('/dashboard')}
                 className="flex items-center gap-2 mr-4"
               >
                 <ArrowLeft className="h-4 w-4" />

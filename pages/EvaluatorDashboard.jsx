@@ -34,7 +34,7 @@ const EvaluatorDashboard = () => {
 
   const handleLogout = () => {
     logout();
-    navigate('/evaluator/login');
+    navigate('/login');
     setMobileMenuOpen(false);
   };
 
@@ -61,9 +61,7 @@ const EvaluatorDashboard = () => {
           <div className="flex justify-between h-16">
             <div className="flex items-center flex-1 min-w-0">
               <div className="flex-shrink-0 flex items-center">
-                <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-purple-800 rounded-xl flex items-center justify-center mr-4 shadow-md">
-                  <ClipboardCheck className="h-5 w-5 text-white" />
-                </div>
+                <img src="/logo-anu.png" alt="AU" style={{ height: '48px', width: '48px', objectFit: 'contain', borderRadius: '8px', marginRight: '16px' }} />
                 <div className="hidden lg:block">
                   <span className="text-lg font-bold text-gray-900 leading-tight">
                     <span className="text-gray-900">Acharya Nagarjuna University</span>
@@ -72,7 +70,9 @@ const EvaluatorDashboard = () => {
                   </span>
                 </div>
                 <div className="block lg:hidden">
-                  <span className="text-xl font-bold text-gray-900">AU Evaluator</span>
+                  <span className="flex items-center">
+                    <img src="/logo-anu.png" alt="AU" style={{ height: '32px', width: '32px', objectFit: 'contain', marginRight: '6px', borderRadius: '8px' }} /> Evaluator
+                  </span>
                 </div>
               </div>
             </div>
@@ -245,7 +245,7 @@ const EvaluatorDashboard = () => {
                       </div>
                       
                       <Button
-                        onClick={() => navigate(`/evaluator/evaluate/${subjectData.course._id}/${subjectData.subject.subjectCode}`)}
+                        onClick={() => navigate(`/evaluate/${subjectData.course._id}/${subjectData.subject.subjectCode}`)}
                         className="w-full mt-4"
                         variant="default"
                       >

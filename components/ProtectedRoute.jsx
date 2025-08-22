@@ -13,19 +13,19 @@ const ProtectedRoute = ({ children, adminOnly = false, evaluatorOnly = false, ad
   }
 
   if (!isAuthenticated) {
-    return <Navigate to="/evaluator/login" replace />;
+    return <Navigate to="/login" replace />;
   }
 
   if (adminOnly && !isAdmin) {
-    return <Navigate to="/evaluator/dashboard" replace />;
+    return <Navigate to="/dashboard" replace />;
   }
 
   if (evaluatorOnly && !isEvaluator) {
-    return <Navigate to="/evaluator/dashboard" replace />;
+    return <Navigate to="/dashboard" replace />;
   }
 
   if (adminOrEvaluator && !isAdmin && !isEvaluator) {
-    return <Navigate to="/evaluator/dashboard" replace />;
+    return <Navigate to="/dashboard" replace />;
   }
 
   return children;

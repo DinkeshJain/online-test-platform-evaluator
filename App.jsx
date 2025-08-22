@@ -37,10 +37,10 @@ function EvaluatorApp() {
             }}
           />
           <Routes>
-            <Route path="/evaluator/login" element={<EvaluatorLogin />} />
-            <Route path="/evaluator/register" element={<EvaluatorRegister />} />
+            <Route path="/login" element={<EvaluatorLogin />} />
+            <Route path="/register" element={<EvaluatorRegister />} />
             <Route 
-              path="/evaluator/dashboard" 
+              path="/dashboard" 
               element={
                 <ProtectedRoute evaluatorOnly>
                   <EvaluatorDashboard />
@@ -48,15 +48,15 @@ function EvaluatorApp() {
               } 
             />
             <Route 
-              path="/evaluator/evaluate/:courseId/:subjectCode" 
+              path="/evaluate/:courseId/:subjectCode" 
               element={
                 <ProtectedRoute evaluatorOnly>
                   <InternalMarksEvaluation />
                 </ProtectedRoute>
               } 
             />
-            <Route path="/evaluator" element={<Navigate to="/evaluator/login" replace />} />
-            <Route path="/" element={<Navigate to="/evaluator/login" replace />} />
+            <Route path="/evaluator" element={<Navigate to="/login" replace />} />
+            <Route path="/" element={<Navigate to="/login" replace />} />
           </Routes>
         </div>
       </Router>
