@@ -245,7 +245,7 @@ const EvaluatorDashboard = () => {
                       </div>
                       
                       <Button
-                        onClick={() => navigate(`/evaluate/${subjectData.course._id}/${subjectData.subject.subjectCode}`)}
+                        onClick={() => navigate(`/${subjectData.course._id}/${subjectData.subject.subjectCode}`)}
                         className="w-full mt-4"
                         variant="default"
                       >

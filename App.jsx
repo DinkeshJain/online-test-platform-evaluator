@@ -48,7 +48,7 @@ function EvaluatorApp() {
               } 
             />
             <Route 
-              path="/evaluate/:courseId/:subjectCode" 
+              path="/:courseId/:subjectCode" 
               element={
                 <ProtectedRoute evaluatorOnly>
                   <InternalMarksEvaluation />
